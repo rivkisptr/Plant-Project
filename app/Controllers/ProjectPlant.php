@@ -42,4 +42,13 @@ class ProjectPlant extends BaseController
         ];
         return view('pages/test', $data);
     }
+
+    public function predict()
+    {
+        $data = [
+            'title' => 'Predict Your Best Plant',
+            'plant' => $this->PlantModel->getPlant()
+        ];
+        return view('pages/RecommendPage', $data);
+    }
 }
