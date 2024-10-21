@@ -1,0 +1,74 @@
+ERROR - 2024-10-21 02:53:31 --> mysqli_sql_exception: Table 'plantymendation.plant_info' doesn't exist in engine in C:\Users\Rivki Saputra\Documents\Backup\htdocs\plant-project\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\Rivki Saputra\Documents\Backup\htdocs\plant-project\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\Rivki Saputra\Documents\Backup\htdocs\plant-project\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\Rivki Saputra\Documents\Backup\htdocs\plant-project\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\Rivki Saputra\Documents\Backup\htdocs\plant-project\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Rivki Saputra\Documents\Backup\htdocs\plant-project\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Rivki Saputra\Documents\Backup\htdocs\plant-project\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\Rivki Saputra\Documents\Backup\htdocs\plant-project\app\Models\PlantModel.php(15): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\Rivki Saputra\Documents\Backup\htdocs\plant-project\app\Controllers\ProjectPlant.php(41): App\Models\PlantModel->getPlant()
+#8 C:\Users\Rivki Saputra\Documents\Backup\htdocs\plant-project\system\CodeIgniter.php(933): App\Controllers\ProjectPlant->samplePost()
+#9 C:\Users\Rivki Saputra\Documents\Backup\htdocs\plant-project\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProjectPlant))
+#10 C:\Users\Rivki Saputra\Documents\Backup\htdocs\plant-project\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\Rivki Saputra\Documents\Backup\htdocs\plant-project\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\Rivki Saputra\Documents\Backup\htdocs\plant-project\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\Rivki Saputra\Documents\Backup\htdocs\plant-project\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\Rivki Saputra\Documents\Backup\htdocs\plant-project\system\rewrite.php(44): require_once('C:\\Users\\Rivki ...')
+#15 {main}
+CRITICAL - 2024-10-21 02:53:31 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'plantymendation.plant_info' doesn't exist in engine
+[Method: GET, Route: samplepost]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `plant_info`', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\PlantModel.php(15): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\ProjectPlant.php(41): App\Models\PlantModel->getPlant()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProjectPlant->samplePost()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProjectPlant))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Rivki Saputra\\Documents\\Backup\\htdocs\\plant-project\\public\\index.php')
+CRITICAL - 2024-10-21 02:53:31 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'plantymendation.plant_info' doesn't exist in engine
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `plant_info`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `plant_info`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `plant_info`', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\PlantModel.php(15): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\ProjectPlant.php(41): App\Models\PlantModel->getPlant()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProjectPlant->samplePost()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProjectPlant))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Rivki Saputra\\Documents\\Backup\\htdocs\\plant-project\\public\\index.php')
+CRITICAL - 2024-10-21 02:53:31 --> [Caused by] mysqli_sql_exception: Table 'plantymendation.plant_info' doesn't exist in engine
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *
+FROM `plant_info`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `plant_info`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `plant_info`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `plant_info`', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\PlantModel.php(15): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\ProjectPlant.php(41): App\Models\PlantModel->getPlant()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProjectPlant->samplePost()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProjectPlant))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Rivki Saputra\\Documents\\Backup\\htdocs\\plant-project\\public\\index.php')

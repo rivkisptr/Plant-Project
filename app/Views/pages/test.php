@@ -5,7 +5,7 @@
 <!-- Post Content-->
 <div class="grid-container">
     <?php foreach ($plant as $p) : ?>
-        <div class="card" data-bs-toggle="modal" data-bs-target="#staticBackdrop-<?= $p['id'] ?>" data-caption="Map">
+        <div class="card" data-bs-toggle="modal" data-bs-target="#staticBackdrop-<?= $p['id'] ?>" data-caption="<?= $p['tanaman']; ?>">
             <img src="/img/<?= $p['img']; ?>" class="foto">
         </div>
 

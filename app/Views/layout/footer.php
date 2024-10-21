@@ -42,6 +42,7 @@
 
     cards.forEach((card) => {
         const caption = card.getAttribute('data-caption');
+        console.log(caption);
         card.style.setProperty('--caption', `"${caption}"`);
     });
 </script>
